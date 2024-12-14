@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class main {
+public class deck {
 
     private String Suit;
     private String Value;
@@ -9,7 +9,7 @@ public class main {
     private String[] Values = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
     String[] Cards = new String[Suits.length * Values.length];
 
-    public main(String Suit, String Value) {
+    public deck(String Suit, String Value) {
         this.Suit = Suit;
         this.Value = Value;
     }
@@ -45,12 +45,12 @@ public class main {
     }
 
     public static void main(String[] args) {
-        main deck = new main("H", "A");
-        String[] allCards = deck.createCards();
+        deck Deck = new deck("H", "A");
+        String[] allCards = Deck.createCards();
 
         // Print all cards
         for (String card : allCards) {
-            deck.shuffleCards();
+            Deck.shuffleCards();
             System.out.println(card);
         }
     }
